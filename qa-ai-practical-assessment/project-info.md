@@ -16,7 +16,7 @@ This project validates the **Practice Software Testing Toolshop**, a public Angu
 
 Deliverables include eight manual test cases (`FunctionalTestCase.csv`), a Playwright automation framework (`PrismStructure/`) with four UI smoke and four UI regression specs, two API smoke and four API regression specs, requirement and strategy documentation, a centralized test-data module, and prompt histories in `ai-prompts/`.
 
-AI (Cursor) accelerated drafting and implementation across the lifecycle. **All AI output was reviewed against the assessment PDF, live SUT behaviour, OpenAPI documentation, and Playwright run results** before acceptance. Manual test cases are designed but **not yet executed**; automation suites were run during development with recorded API pass results and partial UI pass results (see Validation section).
+AI (Cursor) accelerated drafting and implementation across the lifecycle. **All AI output was reviewed against the assessment PDF, live SUT behaviour, OpenAPI documentation, and Playwright run results** before acceptance. All eight manual cases in `FunctionalTestCase.csv` are **Passed** (TC-MAN-001–006 automation-backed; TC-MAN-007–008 manual screenshots in `execution-evidence/manual/`). Automation: **14/14 passed** — see Validation section and `execution-evidence/EXECUTION-SUMMARY.md`.
 
 ---
 
@@ -115,7 +115,7 @@ A follow-up **senior QA review prompt** produced targeted CSV fixes only (not a 
 - Baseline invoice count and screenshot evidence path for TC-MAN-005.
 - Clarified session/logout labelling for TC-MAN-008.
 
-**QA judgment applied:** Kept 8-case limit. Combined browse/search/cart/checkout into TC-MAN-002 to maximise AC2 coverage. **All manual cases remain Status: Not Executed** — design and review only; no manual run evidence attached yet.
+**QA judgment applied:** Kept 8-case limit. Combined browse/search/cart/checkout into TC-MAN-002 to maximise AC2 coverage. **All manual cases executed and Passed** (9 August 2026): TC-MAN-001–006 verified via passing UI automation specs; TC-MAN-007–008 via `scripts/capture-manual-evidence.js` with screenshots in `execution-evidence/manual/`.
 
 ---
 

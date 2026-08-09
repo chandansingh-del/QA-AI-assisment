@@ -224,16 +224,22 @@ npx playwright test --project ui-chromium --grep @smoke --workers=1
 
 ## Running UI Regression Tests
 
-There is no dedicated `test:ui:regression` npm script. Run UI regression with:
+From `PrismStructure/`:
+
+```bash
+npm run test:ui:regression
+```
+
+Equivalent:
 
 ```bash
 npx playwright test --project ui-chromium --grep @regression
 ```
 
-Recommended:
+Recommended on the shared public SUT:
 
 ```bash
-npx playwright test --project ui-chromium --grep @regression --workers=1
+npm run test:ui:regression -- --workers=1
 ```
 
 **Specs (4):**
@@ -272,10 +278,22 @@ npx playwright test --project api --grep @smoke
 
 ## Running API Regression Tests
 
-There is no dedicated `test:api:regression` npm script. Run API regression with:
+From `PrismStructure/`:
+
+```bash
+npm run test:api:regression
+```
+
+Equivalent:
 
 ```bash
 npx playwright test --project api --grep @regression
+```
+
+Recommended:
+
+```bash
+npm run test:api:regression -- --workers=1
 ```
 
 **Specs (4):**
@@ -363,7 +381,15 @@ Attach after runs:
 
 Naming convention: `YYYY-MM-DD_<suite>_<browser>_<result>.png`
 
-**Current status:** Manual cases in `FunctionalTestCase.csv` are designed with status **Not Executed**. Automation was run during development; copy latest `playwright-report/` into `execution-evidence/` before submission.
+**Current status (9 August 2026):**
+
+| Tier | Status | Evidence |
+|------|--------|----------|
+| Manual (`FunctionalTestCase.csv`) | **8/8 Passed** | TC-MAN-001–006 automation-backed; TC-MAN-007–008 screenshots in `execution-evidence/manual/` |
+| Automation | **14/14 Passed** | `execution-evidence/EXECUTION-SUMMARY.md` |
+| HTML report | Packaged | `execution-evidence/2026-08-09_playwright-report/index.html` |
+
+Full log: [`execution-evidence/manual/MANUAL-EXECUTION-LOG.md`](execution-evidence/manual/MANUAL-EXECUTION-LOG.md)
 
 ---
 
@@ -444,7 +470,7 @@ Full narrative: [`project-info.md`](project-info.md)
 - **Selector gaps** — invoice detail view uses labelled textboxes; not all fields have `data-test` hooks.
 - **API vs UI parity** — live API may accept out-of-stock add-to-cart (200) while UI blocks it; API regression does not duplicate OOS UI coverage.
 - **OpenAPI drift** — e.g. `POST /invoices` returns `201` (not documented `200`); tests assert live behaviour.
-- **Execution evidence** — reports are generated under `playwright-report/`; copies for submission must be added to `execution-evidence/` manually.
+- **Execution evidence** — latest run summary in `execution-evidence/EXECUTION-SUMMARY.md`; HTML report packaged under `execution-evidence/2026-08-09_playwright-report/`. Re-run `npm test` and copy `playwright-report/` if refreshing evidence.
 
 ---
 
@@ -480,9 +506,9 @@ git log --oneline -- qa-ai-practical-assessment/
 | Install | `npm install && npx playwright install chromium` |
 | Configure | `cp .env.example .env` then edit credentials |
 | UI smoke | `npm run test:ui:smoke` |
-| UI regression | `npx playwright test --project ui-chromium --grep @regression` |
+| UI regression | `npm run test:ui:regression` |
 | API smoke | `npm run test:api:smoke` |
-| API regression | `npx playwright test --project api --grep @regression` |
+| API regression | `npm run test:api:regression` |
 | All tests | `npm test` |
 | HTML report | `npm run report` |
 | API pre-flight | `node scripts/api-connectivity-check.js` |
