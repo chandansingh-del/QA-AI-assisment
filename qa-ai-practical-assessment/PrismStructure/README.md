@@ -66,4 +66,4 @@ npm run report
 
 ## Status
 
-Framework architecture implemented. Test specs — next phase.
+Framework and test suites implemented: **8 UI** specs (4 smoke + 4 regression) and **6 API** specs (2 smoke + 4 regression). See root `readme.md` and `execution-evidence/EXECUTION-SUMMARY.md` for run results.

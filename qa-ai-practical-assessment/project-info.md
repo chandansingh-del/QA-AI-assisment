@@ -31,7 +31,7 @@ AI (Cursor) accelerated drafting and implementation across the lifecycle. **All 
 | Language | JavaScript (Node.js 18+) |
 | Configuration | `dotenv` for credentials; `playwright.config.js` for UI/API projects |
 | Reporting | Playwright HTML report (`playwright-report/`) |
-| Version control | Git (local; public remote URL to be added in `readme.md`) |
+| Version control | Git — https://github.com/chandansingh-del/QA-AI-assisment |
 | Reference sources | Assessment PDF, live UI, OpenAPI spec (`/docs?api-docs.json`), SUT public README for seeded accounts |
 
 **Not used:** Faker library (unique data built with timestamp + random suffix in `testData.js`); Firefox/WebKit browsers; external Prism npm package (project uses a local POM layout named PrismStructure).
@@ -156,15 +156,16 @@ Validation was continuous — AI drafts were not accepted without checks:
 | Traceability review | CSV vs strategy matrix alignment; spec header comments (TC-UI-*, TC-API-*) |
 | Structured debug prompt | Checkout 422 reclassified from "SUT issue" to **automation defect** (Angular billing form binding) |
 
-**Recorded automation results (development runs, not formal execution report):**
+**Recorded automation results (final execution review, 9 August 2026):**
 
-- API full suite: **6/6 passed**
-- UI smoke (initial): **3/4 passed** (`checkout-invoice` failing)
-- UI suite (mid-session): **7/8 passed**
-- `checkout-invoice` (after debug fix): **single-test pass**
-- Full UI suite post-fix: run **interrupted** — final 8/8 not consistently recorded
+- **Complete suite: 14/14 passed** (`execution-evidence/EXECUTION-SUMMARY.md`)
+- UI smoke: 4/4 | UI regression: 4/4 | API smoke: 2/2 | API regression: 4/4
+- HTML report packaged under `execution-evidence/2026-08-09_playwright-report/`
 
-Manual CSV execution and copying HTML reports to `execution-evidence/` remain **pending**.
+**Manual execution:**
+
+- TC-MAN-001 … TC-MAN-006: **Passed (automation-backed)** — same flows verified by passing UI/API specs on 9 August 2026
+- TC-MAN-007, TC-MAN-008: **Passed (manual evidence)** — screenshots in `execution-evidence/manual/`
 
 ---
 

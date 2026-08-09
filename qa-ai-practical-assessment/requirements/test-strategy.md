@@ -65,6 +65,7 @@ This strategy optimizes for **maximum coverage with minimum duplication** within
 | PDF download E2E | API supports it; low priority within 5–8 API limit |
 | Invoice status admin transitions | State machine noted in assessment; cover minimally via API if slot available |
 | Buggy variant (`with-bugs.practicesoftwaretesting.com`) | Not the primary SUT |
+| Invoice/product **comment** flows (core AC list item) | Deferred — no case slot after P0 purchase, auth, and double-confirm coverage; not in UI/API AC examples |
 
 ---
 
