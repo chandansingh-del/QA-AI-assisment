@@ -8,7 +8,6 @@ const { test: base, expect } = require('@playwright/test');
 const pages = require('../pages');
 const api = require('../api');
 const testData = require('../test-data/testData');
-const { expectJson } = require('../utils/apiAssertions');
 
 /** @typedef {import('@playwright/test').APIRequestContext} APIRequestContext */
 
@@ -55,6 +54,9 @@ const test = base.extend({
   authApi: async ({ request }, use) => {
     await use(new api.AuthApi(request));
   },
+  usersApi: async ({ request }, use) => {
+    await use(new api.UsersApi(request));
+  },
   productsApi: async ({ request }, use) => {
     await use(new api.ProductsApi(request));
   },
@@ -73,23 +75,9 @@ const test = base.extend({
    * Independent per test; uses seeded customer from .env.
    */
   authenticatedApi: async ({ request }, use) => {
-    const authApi = new api.AuthApi(request);
     const credentials = testData.buildLoginPayloadSeededCustomer();
-    const loginResponse = await authApi.login(credentials);
-    const loginBody = await expectJson(loginResponse, 200);
-    const token = loginBody.access_token;
-    if (!token) {
-      throw new Error('Login succeeded but access_token missing in response');
-    }
-    await use({
-      token,
-      credentials,
-      authApi: authApi.withToken(token),
-      productsApi: new api.ProductsApi(request, token),
-      cartApi: new api.CartApi(request, token),
-      invoiceApi: new api.InvoiceApi(request, token),
-      paymentApi: new api.PaymentApi(request, token),
-    });
+    const session = await api.AuthApi.createAuthenticatedSession(request, credentials);
+    await use(session);
   },
 
   /**
