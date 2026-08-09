@@ -44,12 +44,7 @@ test.describe('Regression — Single confirm', () => {
     await cartPage.open();
     const resolvedBilling = await checkoutPage.completeBillingAndPayment(cartPage, billing);
     await expect(checkoutPage.confirmButton).toBeEnabled();
-    await checkoutPage.ensureBillingBoundForInvoice({
-      state: billing.state,
-      postalCode: billing.postalCode,
-      street: resolvedBilling.street,
-      city: resolvedBilling.city,
-    });
+    await checkoutPage.ensureBillingBoundForInvoice(billing);
 
     let invoicePostCount = 0;
     page.on('request', (req) => {

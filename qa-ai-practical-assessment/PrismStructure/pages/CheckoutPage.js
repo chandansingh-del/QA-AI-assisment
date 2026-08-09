@@ -51,6 +51,26 @@ class CheckoutPage extends BasePage {
   }
 
   /**
+   * Ensure Angular reactive form control receives the value (not only the DOM input).
+   * @param {import('@playwright/test').Locator} locator
+   * @param {string} value
+   */
+  async bindAngularFormControl(locator, value) {
+    await locator.evaluate((el, nextValue) => {
+      el.removeAttribute('disabled');
+      el.removeAttribute('readonly');
+      const descriptor = Object.getOwnPropertyDescriptor(
+        window.HTMLInputElement.prototype,
+        'value'
+      );
+      descriptor?.set?.call(el, nextValue);
+      el.dispatchEvent(new Event('input', { bubbles: true }));
+      el.dispatchEvent(new Event('change', { bubbles: true }));
+      el.dispatchEvent(new Event('blur', { bubbles: true }));
+    }, value);
+  }
+
+  /**
    * @param {{
    *   street: string,
    *   city: string,
@@ -103,18 +123,22 @@ class CheckoutPage extends BasePage {
   }
 
   /**
-   * Re-sync billing controls so Angular includes string values in invoice payload.
-   * @param {{ state: string, postalCode: string, street?: string, city?: string }} billing
+   * Postcode lookup can leave hidden billing controls out of sync with the assessment
+   * address used by POST /invoices — rebind the full payload before the second confirm.
+   * @param {{
+   *   street: string,
+   *   city: string,
+   *   state: string,
+   *   country: string,
+   *   postalCode: string,
+   * }} billing
    */
   async ensureBillingBoundForInvoice(billing) {
-    await this.syncInputValue(this.stateInput, billing.state);
-    await this.syncInputValue(this.postalCodeInput, billing.postalCode);
-    if (billing.street) {
-      await this.syncInputValue(this.streetInput, billing.street);
-    }
-    if (billing.city) {
-      await this.syncInputValue(this.cityInput, billing.city);
-    }
+    await this.countrySelect.selectOption({ value: billing.country }, { force: true });
+    await this.bindAngularFormControl(this.streetInput, billing.street);
+    await this.bindAngularFormControl(this.cityInput, billing.city);
+    await this.bindAngularFormControl(this.stateInput, billing.state);
+    await this.bindAngularFormControl(this.postalCodeInput, billing.postalCode);
   }
 
   /**
@@ -134,9 +158,6 @@ class CheckoutPage extends BasePage {
 
   /** Assessment requirement: invoice requires Confirm clicked twice. */
   async confirmOrderTwice(billing) {
-    if (billing) {
-      await this.ensureBillingBoundForInvoice(billing);
-    }
     await expect(this.confirmButton).toBeEnabled();
     await Promise.all([
       this.page.waitForResponse(

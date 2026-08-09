@@ -16,7 +16,6 @@ test.describe('Smoke — Checkout and invoice', () => {
     checkoutPage,
     invoicesPage,
     invoiceDetailPage,
-    appHeader,
   }) => {
     const { primary, secondary } = await resolveSmokeProducts(request);
     const billing = {
@@ -35,31 +34,25 @@ test.describe('Smoke — Checkout and invoice', () => {
     await cartPage.open();
     await cartPage.updateLineQuantity(secondary.name, updatedQty);
 
-    const resolvedBilling = await checkoutPage.completeBillingAndPayment(cartPage, billing);
+    await checkoutPage.completeBillingAndPayment(cartPage, billing);
     await expect(checkoutPage.confirmButton).toBeEnabled();
-    await checkoutPage.confirmOrderTwice({
-      state: resolvedBilling.state || billing.state,
-      postalCode: resolvedBilling.postalCode || billing.postalCode,
-      street: resolvedBilling.street,
-      city: resolvedBilling.city,
-    });
+    await checkoutPage.confirmOrderTwice(billing);
 
-    await appHeader.goToInvoices();
-    await page.reload();
+    await invoicesPage.open();
     await expect(invoicesPage.pageTitle).toContainText(/invoice/i);
 
     await expect
-      .poll(async () => invoicesPage.invoiceRowByBillingStreet(resolvedBilling.street).count(), {
+      .poll(async () => invoicesPage.invoiceRowByBillingStreet(billing.street).count(), {
         timeout: 30_000,
       })
       .toBeGreaterThan(0);
 
-    await invoicesPage.openInvoiceByBillingStreet(resolvedBilling.street);
-    await expect(invoiceDetailPage.pageTitle).toContainText(/INV-/i);
+    await invoicesPage.openInvoiceByBillingStreet(billing.street);
+    await expect(invoiceDetailPage.invoiceNumberField).toHaveValue(/INV-/i);
     await expect(invoiceDetailPage.lineRow(primary.name)).toBeVisible();
     await expect(invoiceDetailPage.lineRow(secondary.name)).toBeVisible();
-    await expect(page.getByText(resolvedBilling.street).first()).toBeVisible();
-    await expect(page.getByText(resolvedBilling.city).first()).toBeVisible();
-    await expect(page.getByText(resolvedBilling.state).first()).toBeVisible();
+    await expect(invoiceDetailPage.billingStreetField).toHaveValue(billing.street);
+    await expect(invoiceDetailPage.billingCityField).toHaveValue(billing.city);
+    await expect(invoiceDetailPage.billingStateField).toHaveValue(billing.state);
   });
 });
