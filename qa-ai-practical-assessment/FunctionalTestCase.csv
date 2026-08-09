@@ -1,0 +1,3 @@
+Test ID,Module,Title,Type,Priority,Preconditions,Test Steps,Expected Result,Tags,Status,Notes
+TC-MAN-001,,,,High,,,,@smoke,Not Executed,Populate during manual test design phase
+TC-MAN-002,,,,Medium,,,,@regression,Not Executed,Populate during manual test design phase

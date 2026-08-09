@@ -1,0 +1,25 @@
+---
+description: Credential handling and deterministic test data rules
+globs: PrismStructure/**/*
+alwaysApply: false
+---
+
+# Test Data and Credential Security
+
+- **Never** hardcode passwords or tokens in committed source files
+- Load credentials from `.env` (copy from `.env.example`); `.env` is gitignored
+- Use seeded public SUT accounts only via environment variables
+- Generate unique emails for registration: `user+${Date.now()}@example.com`
+- Fetch product IDs at runtime; prefer in-stock products from API response
+- Use deterministic billing data for invoice tests (assessment example fields)
+- Do not commit bearer tokens, traces, or logs containing auth headers
+
+```javascript
+// Good
+const email = process.env.CUSTOMER_EMAIL;
+
+// Bad — never commit
+const password = 'welcome01';
+```
+
+- Document data strategy in `ai-prompts/test-data.md` and `PrismStructure/test-data/`

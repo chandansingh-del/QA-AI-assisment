@@ -1,0 +1,24 @@
+---
+description: Playwright best practices for UI and test configuration
+globs: PrismStructure/**/*
+alwaysApply: false
+---
+
+# Playwright Best Practices
+
+- Use `@playwright/test` — no mixed test runners
+- Prefer `getByRole`, `getByLabel`, `getByTestId` over brittle CSS/XPath
+- Use `baseURL` from config; navigate with relative paths where possible
+- Enable `trace: on-first-retry`, screenshots and video on failure
+- Avoid `page.waitForTimeout()` — use `expect` auto-waiting or `waitFor` with conditions
+- Keep specs thin; move selectors and actions to page objects
+- Use `test.describe` grouped by feature; tag with `@smoke` / `@regression`
+- Run smoke before regression in CI/local workflow
+
+```javascript
+// Prefer
+await page.getByRole('button', { name: 'Login' }).click();
+
+// Avoid
+await page.locator('#btn-login-xyz').click();
+```

@@ -1,0 +1,30 @@
+---
+description: Meaningful assertions and avoiding duplicate test coverage
+globs: PrismStructure/tests/**/*
+alwaysApply: false
+---
+
+# Assertions and Test Deduplication
+
+## Meaningful Assertions
+
+- Assert user-visible outcomes: URL, heading text, invoice number, cart count
+- API: validate specific fields (`access_token`, `cart_items`, `invoice_number`)
+- Avoid weak checks: `toBeTruthy()` on large objects without field checks
+- One primary assertion per logical expectation; group related checks in same step
+
+```javascript
+// Weak
+expect(body).toBeTruthy();
+
+// Strong
+expect(body.invoice_number).toMatch(/^INV-/);
+expect(body.status).toBe('COMPLETED');
+```
+
+## Avoid Duplication
+
+- Do not repeat login steps in every spec — use `authenticated` fixture
+- Shared setup belongs in `beforeEach` or fixtures, not copy-pasted across files
+- If UI and API cover the same AC, UI = E2E confidence, API = contract speed — do not duplicate identical assertions in both without reason
+- Extract repeated API calls into helper methods (`createCartWithProduct()`)

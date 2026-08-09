@@ -1,0 +1,27 @@
+---
+description: Page Object Model conventions for maintainable UI automation
+globs: PrismStructure/pages/**/*
+alwaysApply: false
+---
+
+# Maintainable Page Objects
+
+- One page class per route or major flow (`LoginPage`, `CheckoutPage`)
+- Constructor receives `Page`; expose locators as `readonly` properties
+- Methods represent **user actions** (`login()`, `addToCart()`), not test assertions
+- Shared navigation lives in `BasePage.js`
+- Reusable widgets (header, modal) go in `pages/components/`
+- Inject page objects via Playwright fixtures — specs should not `new PageObject(page)` manually
+- Update one page object when UI changes; never duplicate selectors across specs
+
+```javascript
+// Page object: action only
+async submitLogin(email, password) {
+  await this.emailInput.fill(email);
+  await this.passwordInput.fill(password);
+  await this.loginButton.click();
+}
+
+// Spec: assertion
+await expect(page).toHaveURL(/account/);
+```

@@ -1,0 +1,15 @@
+---
+description: Core QA automation standards for this assessment project
+alwaysApply: true
+---
+
+# QA Automation Conventions
+
+- Follow the PrismStructure layout: `pages/`, `fixtures/`, `tests/ui/`, `tests/api/`, `utils/`, `test-data/`
+- Limit to **5–8 test cases per tier** (manual, UI, API) with `@smoke` and `@regression` tags
+- Map every test to an acceptance criterion (AC1, AC2) in comments or CSV traceability
+- Do not expand scope beyond assessment core flows without explicit request
+- Prefer iterative commits — avoid single large commits
+- Record meaningful AI prompts in `ai-prompts/` after each phase
+- Do not invent SUT behavior; verify against live UI and OpenAPI documentation
+- Known UI behavior: invoice may require **confirm pressed twice** — document in tests when implemented
