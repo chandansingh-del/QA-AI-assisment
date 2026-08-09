@@ -236,7 +236,7 @@ This workflow is reusable as a **phase-gated AI-assisted lifecycle**:
 7. **Debug with classification** — force root-cause type (product vs automation vs data) before patching; reject assertion weakening.
 8. **CI-ready structure** — Playwright projects, tags (`@smoke` / `@regression`), HTML reports, and `workers=1` for shared-environment stability.
 
-In production, I would add: PR review of AI-generated tests, secret scanning, scheduled runs against a dedicated test environment, and mandatory execution-evidence attachment before release sign-off — steps started but not fully completed in this exercise due to time scope on manual execution packaging.
+In production, I would add: PR review of AI-generated tests, secret scanning, scheduled runs against a dedicated test environment, and mandatory execution-evidence attachment before release sign-off — manual execution and report packaging completed for this exercise.
 
 ---
 
@@ -248,5 +248,5 @@ In production, I would add: PR review of AI-generated tests, secret scanning, sc
 | Automation | `PrismStructure/` |
 | Requirements | `requirements/` |
 | Prompt history | `ai-prompts/` |
-| Execution evidence (pending) | `execution-evidence/` |
+| Execution evidence | `execution-evidence/` (HTML report + manual screenshots) |
 | Run instructions | `readme.md` |
