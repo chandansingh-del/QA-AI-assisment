@@ -1,15 +1,22 @@
 # Test Data
 
-Static JSON payloads and builders for UI and API tests.
+Builders and constants live in **`testData.js`**.
+
+## Quick start
+
+```bash
+cp ../.env.example ../.env   # set CUSTOMER_EMAIL, CUSTOMER_PASSWORD, REGISTRATION_PASSWORD
+```
+
+```javascript
+const td = require('./testData');
+const user = td.buildValidRegistrationUser();
+const invoice = td.buildInvoicePayload(cartId);
+```
 
 ## Guidelines
 
-- Invoice billing fields per assessment example
-- `payment_method`: `cash-on-delivery`, `payment_details`: `{}`
-- Product IDs should be fetched at runtime from `GET /products` (in-stock items)
-- Never hardcode production credentials in committed files
-
-## Seeded Accounts (public SUT)
-
-Document reference accounts here after confirming against live environment.
-Load actual values from `.env` at runtime.
+- Credentials: environment variables only (see `.env.example`)
+- Product/cart IDs: resolve at runtime from API
+- Unique emails: `td.uniqueEmail('reg')`
+- Full strategy: `ai-prompts/test-data.md`

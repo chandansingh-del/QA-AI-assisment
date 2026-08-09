@@ -1,9 +1,17 @@
 # UI Tests
 
-Spec files for browser-based tests.
+Import fixtures from `../../fixtures` — not `@playwright/test` directly.
 
-Naming: `<feature>.spec.js`
+```javascript
+const { test, expect } = require('../../fixtures');
 
-Tags: `@smoke`, `@regression`
+test.describe('Feature @smoke', () => {
+  test('example', async ({ loginPage }) => {
+    // assertions in spec; actions in page objects
+  });
+});
+```
 
-Do not add spec files until page objects and test data are defined.
+Tag tests with `@smoke` or `@regression` in the title for grep filtering.
+
+**Status:** Framework ready — specs to be added in next phase.

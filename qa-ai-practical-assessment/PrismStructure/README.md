@@ -1,33 +1,69 @@
-# PrismStructure
+# PrismStructure — Playwright Framework
 
-Playwright automation scaffold for UI + API testing (Prism-style Page Object Model).
+Prism-style Page Object Model for Toolshop UI + API automation (JavaScript).
 
-## Folder Layout
+## Architecture
 
 ```
 PrismStructure/
-├── playwright.config.js    # Playwright configuration (placeholder)
-├── package.json            # Dependencies and npm scripts
-├── .env.example            # Environment variable template
-├── fixtures/               # Custom Playwright fixtures (auth, pages)
-├── pages/                  # Page objects (UI)
-│   └── components/         # Reusable UI components
+├── playwright.config.js     # UI + API projects, reporters, failure artifacts
+├── package.json
+├── fixtures/
+│   └── index.js               # test.extend — page objects + API services + auth
+├── pages/                     # UI Page Object Model (actions only)
+│   ├── BasePage.js
+│   ├── LoginPage.js …         # One class per route/flow
+│   └── index.js
+├── api/                       # API service classes (REST wrappers)
+│   ├── BaseApi.js
+│   ├── AuthApi.js … CartApi.js, InvoiceApi.js, PaymentApi.js
+│   └── index.js
 ├── tests/
-│   ├── ui/                 # UI specs (@smoke, @regression)
-│   └── api/                # API specs
-├── utils/                  # Pure helpers (no Playwright imports)
-├── test-data/              # Static payloads and data builders
-├── playwright-report/      # Generated HTML reports (gitignored)
-└── test-results/           # Traces, screenshots (gitignored)
+│   ├── ui/                    # Browser specs — import from fixtures/
+│   └── api/                   # API specs — import from fixtures/
+├── utils/
+│   ├── config.js
+│   ├── productResolver.js     # Runtime product ID lookup
+│   └── apiAssertions.js       # Status + JSON helpers
+└── test-data/
+    └── testData.js            # Deterministic builders + env credentials
 ```
 
-## Conventions
+## Design principles
 
-- **Page objects** expose locators and user actions; avoid assertions unless page-state checks
-- **Specs** contain test logic, tags, and assertions
-- **Fixtures** inject authenticated sessions and page objects
-- **API tests** use `request` fixture against documented OpenAPI endpoints only
+| Layer | Responsibility |
+|-------|----------------|
+| **tests/** | Scenarios, tags (`@smoke` / `@regression`), assertions |
+| **pages/** | Locators + user actions (no assertions) |
+| **api/** | HTTP calls to documented endpoints |
+| **fixtures/** | Dependency injection via `test.extend` |
+| **test-data/** | Payloads, unique emails, env-based credentials |
+| **utils/** | Pure helpers (product resolver, API assertions) |
+
+## Setup
+
+```bash
+npm install
+npx playwright install chromium
+cp .env.example .env   # set CUSTOMER_EMAIL, CUSTOMER_PASSWORD, REGISTRATION_PASSWORD
+```
+
+## Run
+
+```bash
+npm run test:ui:smoke
+npm run test:api:smoke
+npm run test:regression
+npm run report
+```
+
+## Key patterns
+
+- **Double confirm:** `checkoutPage.confirmOrderTwice()` (assessment requirement)
+- **No hardcoded credentials:** `.env` + `testData.getSeededCustomerCredentials()`
+- **No hardcoded product IDs:** `utils/productResolver.js`
+- **No test interdependency:** fresh cart per test; `authenticatedApi` per test
 
 ## Status
 
-> Scaffold only — tests, page objects, and config values to be implemented in next phase.
+Framework architecture implemented. Test specs — next phase.

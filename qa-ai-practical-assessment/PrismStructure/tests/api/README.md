@@ -1,13 +1,19 @@
 # API Tests
 
-Spec files using Playwright `request` fixture.
+Import fixtures from `../../fixtures`.
 
-Reference only documented endpoints from:
-https://api.practicesoftwaretesting.com/api/documentation
+```javascript
+const { test, expect } = require('../../fixtures');
+const { expectJson } = require('../../utils/apiAssertions');
 
-Suggested flows (assessment AC):
+test('example @smoke', async ({ authenticatedApi, cartApi }) => {
+  const cartRes = await authenticatedApi.cartApi.create();
+  const body = await expectJson(cartRes, 201);
+  expect(body.id).toBeTruthy();
+});
+```
 
-1. Register → Login → Create cart
-2. Get products → Add to cart → Verify cart → Create invoice
+Use `authenticatedApi` fixture for bearer-token flows.
+Use raw `authApi` / `cartApi` for negative tests.
 
-Do not add spec files until API helpers are defined.
+**Status:** Framework ready — specs to be added in next phase.
