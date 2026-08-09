@@ -14,11 +14,20 @@ const { expectJson } = require('../utils/apiAssertions');
 
 const test = base.extend({
   // ---- Page objects (UI) ----
+  appHeader: async ({ page }, use) => {
+    await use(new pages.AppHeader(page));
+  },
   loginPage: async ({ page }, use) => {
     await use(new pages.LoginPage(page));
   },
   registerPage: async ({ page }, use) => {
     await use(new pages.RegisterPage(page));
+  },
+  homePage: async ({ page }, use) => {
+    await use(new pages.HomePage(page));
+  },
+  categoryListingPage: async ({ page }, use) => {
+    await use(new pages.CategoryListingPage(page));
   },
   productsPage: async ({ page }, use) => {
     await use(new pages.ProductsPage(page));
@@ -37,6 +46,9 @@ const test = base.extend({
   },
   invoicesPage: async ({ page }, use) => {
     await use(new pages.InvoicesPage(page));
+  },
+  invoiceDetailPage: async ({ page }, use) => {
+    await use(new pages.InvoiceDetailPage(page));
   },
 
   // ---- API service classes ----
@@ -88,7 +100,6 @@ const test = base.extend({
     const credentials = testData.getSeededCustomerCredentials();
     await loginPage.open();
     await loginPage.login(credentials.email, credentials.password);
-    await page.waitForURL(/\/(account|products)?/);
     await use({ page, credentials });
   },
 });

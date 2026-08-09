@@ -1,32 +1,66 @@
 const { BasePage } = require('./BasePage');
 
+/**
+ * Cart line items render on /checkout (not /cart when empty).
+ */
 class CartPage extends BasePage {
   constructor(page) {
     super(page);
-    this.checkoutButton = page.getByRole('link', { name: /proceed to checkout|checkout/i })
-      .or(page.getByRole('button', { name: /proceed to checkout|checkout/i }));
-    this.cartLines = page.locator('table tbody tr, .cart-item, [data-test="cart-line"]');
-    this.emptyMessage = page.getByText(/cart is empty|no items/i);
+    this.cartTotal = page.getByTestId('cart-total');
+    this.continueShoppingButton = page.getByTestId('continue-shopping');
+    this.proceedStep1 = page.getByTestId('proceed-1');
+    this.proceedStep2 = page.getByTestId('proceed-2');
+    this.proceedStep3 = page.getByTestId('proceed-3');
   }
 
   async open() {
-    await this.goto('/cart');
+    await this.goto('/checkout');
   }
 
   /**
-   * Update quantity for a line containing productName.
+   * @param {string} productName
+   * @returns {import('@playwright/test').Locator}
+   */
+  lineRow(productName) {
+    return this.page.getByRole('row').filter({ hasText: productName });
+  }
+
+  /**
+   * @param {string} productName
+   * @returns {import('@playwright/test').Locator}
+   */
+  lineTitle(productName) {
+    return this.page.getByTestId('product-title').getByText(productName, { exact: true });
+  }
+
+  /**
+   * @param {string} productName
+   * @returns {import('@playwright/test').Locator}
+   */
+  lineQuantityInput(productName) {
+    return this.lineRow(productName).getByRole('spinbutton');
+  }
+
+  /**
+   * @param {string} productName
+   * @returns {import('@playwright/test').Locator}
+   */
+  linePrice(productName) {
+    return this.lineRow(productName).getByTestId('line-price');
+  }
+
+  /**
    * @param {string} productName
    * @param {number} quantity
    */
-  async updateQuantity(productName, quantity) {
-    const row = this.page.locator('tr, .cart-item').filter({ hasText: productName });
-    const qtyInput = row.getByRole('spinbutton').or(row.locator('input[type="number"]'));
+  async updateLineQuantity(productName, quantity) {
+    const qtyInput = this.lineRow(productName).getByRole('spinbutton');
     await qtyInput.fill(String(quantity));
     await qtyInput.press('Tab');
   }
 
-  async proceedToCheckout() {
-    await this.checkoutButton.click();
+  async proceedFromCartReview() {
+    await this.proceedStep1.click();
   }
 }
 

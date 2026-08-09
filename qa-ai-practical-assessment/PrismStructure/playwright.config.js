@@ -34,6 +34,7 @@ module.exports = defineConfig({
       use: {
         ...devices['Desktop Chrome'],
         baseURL: UI_BASE_URL,
+        testIdAttribute: 'data-test',
       },
     },
     {

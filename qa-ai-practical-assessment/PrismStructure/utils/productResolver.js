@@ -1,7 +1,31 @@
 /**
  * Resolve product IDs at runtime from catalog API (no hardcoded IDs).
  */
-const { PRODUCT_NAMES } = require('../test-data/testData');
+const { PRODUCT_NAMES, PRODUCT_NAME_FALLBACKS } = require('../test-data/testData');
+
+/**
+ * @param {import('@playwright/test').APIRequestContext} request
+ * @param {string} apiBaseUrl
+ * @param {number} [maxPages=10]
+ * @returns {Promise<Array<{ id: string, name: string, in_stock: boolean, price: number }>>}
+ */
+async function fetchAllProducts(request, apiBaseUrl, maxPages = 10) {
+  const all = [];
+  for (let page = 1; page <= maxPages; page += 1) {
+    const response = await request.get(`${apiBaseUrl}/products`, {
+      params: { page },
+    });
+    if (!response.ok()) {
+      throw new Error(`GET /products?page=${page} failed: ${response.status()}`);
+    }
+    const body = await response.json();
+    const products = body.data ?? body;
+    if (!products.length) break;
+    all.push(...products);
+    if (products.length < (body.per_page ?? 9)) break;
+  }
+  return all;
+}
 
 /**
  * @param {import('@playwright/test').APIRequestContext} request
@@ -10,19 +34,26 @@ const { PRODUCT_NAMES } = require('../test-data/testData');
  * @returns {Promise<{ id: string, name: string, in_stock: boolean, price: number }>}
  */
 async function getProductByName(request, apiBaseUrl, name) {
-  const response = await request.get(`${apiBaseUrl}/products`, {
-    params: { page: 1 },
+  const searchResponse = await request.get(`${apiBaseUrl}/products/search`, {
+    params: { q: name },
   });
-  if (!response.ok()) {
-    throw new Error(`GET /products failed: ${response.status()}`);
+  if (searchResponse.ok()) {
+    const searchBody = await searchResponse.json();
+    const searchResults = searchBody.data ?? searchBody;
+    const exactSearch = searchResults.find((p) => p.name === name);
+    if (exactSearch) return exactSearch;
   }
-  const body = await response.json();
-  const products = body.data ?? body;
+
+  const products = await fetchAllProducts(request, apiBaseUrl);
   const match = products.find((p) => p.name === name);
-  if (!match) {
-    throw new Error(`Product not found: "${name}"`);
+  if (match) return match;
+
+  const fallbackName = PRODUCT_NAME_FALLBACKS[name];
+  if (fallbackName) {
+    return getProductByName(request, apiBaseUrl, fallbackName);
   }
-  return match;
+
+  throw new Error(`Product not found: "${name}"`);
 }
 
 /**
@@ -40,4 +71,4 @@ async function getInStockSmokeProducts(request, apiBaseUrl) {
   return { primary, secondary };
 }
 
-module.exports = { getProductByName, getInStockSmokeProducts };
+module.exports = { getProductByName, getInStockSmokeProducts, fetchAllProducts };

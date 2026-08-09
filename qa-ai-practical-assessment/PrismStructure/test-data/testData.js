@@ -230,8 +230,14 @@ function buildDuplicateEmailRegistration(overrides = {}) {
 /** Known catalog labels from manual exploration — use for search/detail, not as IDs. */
 const PRODUCT_NAMES = Object.freeze({
   inStockPrimary: 'Combination Pliers',
+  /** API catalog short name; UI may show longer title on detail page. */
   inStockSecondary: 'Claw Hammer',
   outOfStock: 'Long Nose Pliers',
+});
+
+/** Fallback when primary name is absent from API (catalog drift). */
+const PRODUCT_NAME_FALLBACKS = Object.freeze({
+  'Combination Pliers': 'Pliers',
 });
 
 const PRODUCT_SEARCH = Object.freeze({
@@ -488,6 +494,7 @@ module.exports = {
   buildRegistrationMissingFields,
   buildDuplicateEmailRegistration,
   PRODUCT_NAMES,
+  PRODUCT_NAME_FALLBACKS,
   PRODUCT_SEARCH,
   CATEGORY_PATH,
   getInStockProductCriteria,
