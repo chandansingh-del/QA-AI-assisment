@@ -1,0 +1,2570 @@
+{
+  "meta": {
+    "base": "https://practicesoftwaretesting.com",
+    "testIdAttributeRecommendation": "data-test",
+    "dataTestIdFound": false
+  },
+  "loginAttempt": {
+    "urlAfter": "https://practicesoftwaretesting.com/account"
+  },
+  "pages": {
+    "login": {
+      "url": "https://practicesoftwaretesting.com/auth/login",
+      "title": "Login - Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "Sign in",
+          "href": "/auth/login",
+          "dataTest": "nav-sign-in",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-sign-in",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "login-form",
+        "email",
+        "password",
+        "login-submit",
+        "register-link",
+        "forgot-password-link",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "name": null,
+          "id": "email",
+          "placeholder": "Your email",
+          "formcontrolname": "email",
+          "dataTest": "email",
+          "label": "Email address *",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "name": null,
+          "id": "password",
+          "placeholder": "Your password",
+          "formcontrolname": null,
+          "dataTest": "password",
+          "label": "Password *",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "submit",
+          "name": null,
+          "id": null,
+          "placeholder": null,
+          "formcontrolname": null,
+          "dataTest": "login-submit",
+          "label": null,
+          "ariaLabel": "Login"
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Sign in with Google",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "submit",
+          "role": null,
+          "name": "Login",
+          "dataTest": "login-submit",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "register": {
+      "url": "https://practicesoftwaretesting.com/auth/register",
+      "title": "Register - Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "Sign in",
+          "href": "/auth/login",
+          "dataTest": "nav-sign-in",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-sign-in",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "register-form",
+        "first-name",
+        "last-name",
+        "dob",
+        "country",
+        "postcode-lookup-hint",
+        "postal_code",
+        "house_number",
+        "street",
+        "city",
+        "state",
+        "phone",
+        "email",
+        "password",
+        "register-submit",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "first_name",
+          "placeholder": "First name *",
+          "formcontrolname": "first_name",
+          "dataTest": "first-name",
+          "label": "First name",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "last_name",
+          "placeholder": "Your last name *",
+          "formcontrolname": "last_name",
+          "dataTest": "last-name",
+          "label": "Last name",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "dob",
+          "placeholder": "YYYY-MM-DD",
+          "formcontrolname": "dob",
+          "dataTest": "dob",
+          "label": "Date of Birth *",
+          "ariaLabel": null
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "id": "country",
+          "placeholder": null,
+          "formcontrolname": "country",
+          "dataTest": "country",
+          "label": "Country",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "postal_code",
+          "placeholder": "Your Postcode *",
+          "formcontrolname": "postal_code",
+          "dataTest": "postal_code",
+          "label": "Postal code",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "house_number",
+          "placeholder": "e.g. 42 *",
+          "formcontrolname": "house_number",
+          "dataTest": "house_number",
+          "label": "House number",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "street",
+          "placeholder": "Your Street *",
+          "formcontrolname": "street",
+          "dataTest": "street",
+          "label": "Street",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "city",
+          "placeholder": "Your City *",
+          "formcontrolname": "city",
+          "dataTest": "city",
+          "label": "City",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "state",
+          "placeholder": "Your State *",
+          "formcontrolname": "state",
+          "dataTest": "state",
+          "label": "State",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "phone",
+          "placeholder": "Your phone *",
+          "formcontrolname": "phone",
+          "dataTest": "phone",
+          "label": "Phone",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "email",
+          "placeholder": "Your email *",
+          "formcontrolname": "email",
+          "dataTest": "email",
+          "label": "Email address",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "name": null,
+          "id": "password",
+          "placeholder": "Your password",
+          "formcontrolname": null,
+          "dataTest": "password",
+          "label": "Password",
+          "ariaLabel": null
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "role": null,
+          "name": "Register",
+          "dataTest": "register-submit",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "products": {
+      "url": "https://practicesoftwaretesting.com/",
+      "title": "Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "Sign in",
+          "href": "/auth/login",
+          "dataTest": "nav-sign-in",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-sign-in",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "cart": {
+      "url": "https://practicesoftwaretesting.com/",
+      "title": "Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "Sign in",
+          "href": "/auth/login",
+          "dataTest": "nav-sign-in",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-sign-in",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "checkout": {
+      "url": "https://practicesoftwaretesting.com/checkout",
+      "title": "Checkout - Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "Sign in",
+          "href": "/auth/login",
+          "dataTest": "nav-sign-in",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-sign-in",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "combinationPliers": {
+      "url": "https://practicesoftwaretesting.com/product/01KZJRJY8DKJK18DFNM698NGE6",
+      "title": "Combination Pliers - Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "Sign in",
+          "href": "/auth/login",
+          "dataTest": "nav-sign-in",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-sign-in",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "product-name",
+        "unit-price",
+        "co2-rating-badge",
+        "product-description",
+        "decrease-quantity",
+        "quantity",
+        "increase-quantity",
+        "add-to-cart",
+        "add-to-favorites",
+        "add-to-compare",
+        "specs-title",
+        "product-specs",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-unit",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-unit",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-unit",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": "number",
+          "name": null,
+          "id": "quantity-input",
+          "placeholder": null,
+          "formcontrolname": null,
+          "dataTest": "quantity",
+          "label": "Quantity",
+          "ariaLabel": null
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Decrease quantity",
+          "dataTest": "decrease-quantity",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Increase quantity",
+          "dataTest": "increase-quantity",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Add to cart",
+          "dataTest": "add-to-cart",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Add to favourites",
+          "dataTest": "add-to-favorites",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Compare",
+          "dataTest": "add-to-compare",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "clawHammer": {
+      "url": "https://practicesoftwaretesting.com/product/01KZJRJY8PG1R7JCS3QH8CFFC7",
+      "title": "Claw Hammer with Shock Reduction Grip - Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "Sign in",
+          "href": "/auth/login",
+          "dataTest": "nav-sign-in",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-sign-in",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "product-name",
+        "unit-price",
+        "co2-rating-badge",
+        "product-description",
+        "decrease-quantity",
+        "quantity",
+        "increase-quantity",
+        "add-to-cart",
+        "add-to-favorites",
+        "add-to-compare",
+        "specs-title",
+        "product-specs",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-unit",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-unit",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-unit",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-unit",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": "number",
+          "name": null,
+          "id": "quantity-input",
+          "placeholder": null,
+          "formcontrolname": null,
+          "dataTest": "quantity",
+          "label": "Quantity",
+          "ariaLabel": null
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Decrease quantity",
+          "dataTest": "decrease-quantity",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Increase quantity",
+          "dataTest": "increase-quantity",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Add to cart",
+          "dataTest": "add-to-cart",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Add to favourites",
+          "dataTest": "add-to-favorites",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Compare",
+          "dataTest": "add-to-compare",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "longNosePliers": {
+      "url": "https://practicesoftwaretesting.com/product/01KZJRJY8KBKYCHNZCA84V5W3D",
+      "title": "Long Nose Pliers - Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "Sign in",
+          "href": "/auth/login",
+          "dataTest": "nav-sign-in",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-sign-in",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "product-name",
+        "unit-price",
+        "co2-rating-badge",
+        "product-description",
+        "decrease-quantity",
+        "quantity",
+        "increase-quantity",
+        "out-of-stock",
+        "add-to-cart",
+        "add-to-favorites",
+        "add-to-compare",
+        "specs-title",
+        "product-specs",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-unit",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-unit",
+        "spec-row",
+        "spec-name",
+        "spec-value",
+        "spec-value-text",
+        "spec-unit",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": "number",
+          "name": null,
+          "id": "quantity-input",
+          "placeholder": null,
+          "formcontrolname": null,
+          "dataTest": "quantity",
+          "label": "Quantity",
+          "ariaLabel": null
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Decrease quantity",
+          "dataTest": "decrease-quantity",
+          "disabled": true
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Increase quantity",
+          "dataTest": "increase-quantity",
+          "disabled": true
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Add to cart",
+          "dataTest": "add-to-cart",
+          "disabled": true
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Add to favourites",
+          "dataTest": "add-to-favorites",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Compare",
+          "dataTest": "add-to-compare",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "afterLogin": {
+      "url": "https://practicesoftwaretesting.com/account",
+      "title": "Overview - Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "My account",
+          "href": "/account",
+          "dataTest": "nav-my-account",
+          "ariaLabel": null
+        },
+        {
+          "text": "My favorites",
+          "href": "/account/favorites",
+          "dataTest": "nav-my-favorites",
+          "ariaLabel": null
+        },
+        {
+          "text": "My profile",
+          "href": "/account/profile",
+          "dataTest": "nav-my-profile",
+          "ariaLabel": null
+        },
+        {
+          "text": "My invoices",
+          "href": "/account/invoices",
+          "dataTest": "nav-my-invoices",
+          "ariaLabel": null
+        },
+        {
+          "text": "My messages",
+          "href": "/account/messages",
+          "dataTest": "nav-my-messages",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-menu",
+        "nav-my-account",
+        "nav-my-favorites",
+        "nav-my-profile",
+        "nav-my-invoices",
+        "nav-my-messages",
+        "nav-sign-out",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "page-title",
+        "nav-favorites",
+        "nav-profile",
+        "nav-invoices",
+        "nav-messages",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Jane Doe",
+          "dataTest": "nav-menu",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "profile": {
+      "url": "https://practicesoftwaretesting.com/account/profile",
+      "title": "Profile - Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "My account",
+          "href": "/account",
+          "dataTest": "nav-my-account",
+          "ariaLabel": null
+        },
+        {
+          "text": "My favorites",
+          "href": "/account/favorites",
+          "dataTest": "nav-my-favorites",
+          "ariaLabel": null
+        },
+        {
+          "text": "My profile",
+          "href": "/account/profile",
+          "dataTest": "nav-my-profile",
+          "ariaLabel": null
+        },
+        {
+          "text": "My invoices",
+          "href": "/account/invoices",
+          "dataTest": "nav-my-invoices",
+          "ariaLabel": null
+        },
+        {
+          "text": "My messages",
+          "href": "/account/messages",
+          "dataTest": "nav-my-messages",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-menu",
+        "nav-my-account",
+        "nav-my-favorites",
+        "nav-my-profile",
+        "nav-my-invoices",
+        "nav-my-messages",
+        "nav-sign-out",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "page-title",
+        "first-name",
+        "last-name",
+        "email",
+        "phone",
+        "street",
+        "postal_code",
+        "city",
+        "state",
+        "country",
+        "update-profile-submit",
+        "current-password",
+        "new-password",
+        "new-password-confirm",
+        "change-password-submit",
+        "totp-error",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "first_name",
+          "placeholder": null,
+          "formcontrolname": "first_name",
+          "dataTest": "first-name",
+          "label": "First name",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "last_name",
+          "placeholder": null,
+          "formcontrolname": "last_name",
+          "dataTest": "last-name",
+          "label": "Last name",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "email",
+          "placeholder": null,
+          "formcontrolname": "email",
+          "dataTest": "email",
+          "label": "Email address",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "phone",
+          "placeholder": null,
+          "formcontrolname": "phone",
+          "dataTest": "phone",
+          "label": "Phone",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "street",
+          "placeholder": null,
+          "formcontrolname": "street",
+          "dataTest": "street",
+          "label": "Street",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "postal_code",
+          "placeholder": null,
+          "formcontrolname": "postal_code",
+          "dataTest": "postal_code",
+          "label": "Postal code",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "city",
+          "placeholder": null,
+          "formcontrolname": "city",
+          "dataTest": "city",
+          "label": "City",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "state",
+          "placeholder": null,
+          "formcontrolname": "state",
+          "dataTest": "state",
+          "label": "State",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": null,
+          "id": "country",
+          "placeholder": null,
+          "formcontrolname": "country",
+          "dataTest": "country",
+          "label": "Country",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "name": null,
+          "id": "current-password",
+          "placeholder": null,
+          "formcontrolname": "current_password",
+          "dataTest": "current-password",
+          "label": "Current Password",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "name": null,
+          "id": "new-password",
+          "placeholder": "Your password",
+          "formcontrolname": null,
+          "dataTest": "new-password",
+          "label": "New Password",
+          "ariaLabel": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "name": null,
+          "id": "new-password-confirm",
+          "placeholder": "Your password",
+          "formcontrolname": null,
+          "dataTest": "new-password-confirm",
+          "label": "Confirm New Password",
+          "ariaLabel": null
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Jane Doe",
+          "dataTest": "nav-menu",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "role": null,
+          "name": "Update Profile",
+          "dataTest": "update-profile-submit",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "role": null,
+          "name": "Change Password",
+          "dataTest": "change-password-submit",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "invoices": {
+      "url": "https://practicesoftwaretesting.com/account/invoices",
+      "title": "Invoices - Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "My account",
+          "href": "/account",
+          "dataTest": "nav-my-account",
+          "ariaLabel": null
+        },
+        {
+          "text": "My favorites",
+          "href": "/account/favorites",
+          "dataTest": "nav-my-favorites",
+          "ariaLabel": null
+        },
+        {
+          "text": "My profile",
+          "href": "/account/profile",
+          "dataTest": "nav-my-profile",
+          "ariaLabel": null
+        },
+        {
+          "text": "My invoices",
+          "href": "/account/invoices",
+          "dataTest": "nav-my-invoices",
+          "ariaLabel": null
+        },
+        {
+          "text": "My messages",
+          "href": "/account/messages",
+          "dataTest": "nav-my-messages",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-menu",
+        "nav-my-account",
+        "nav-my-favorites",
+        "nav-my-profile",
+        "nav-my-invoices",
+        "nav-my-messages",
+        "nav-sign-out",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "page-title",
+        "pagination-prev",
+        "pagination-next",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Jane Doe",
+          "dataTest": "nav-menu",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "cartAuthenticated": {
+      "url": "https://practicesoftwaretesting.com/",
+      "title": "Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        },
+        {
+          "text": "My account",
+          "href": "/account",
+          "dataTest": "nav-my-account",
+          "ariaLabel": null
+        },
+        {
+          "text": "My favorites",
+          "href": "/account/favorites",
+          "dataTest": "nav-my-favorites",
+          "ariaLabel": null
+        },
+        {
+          "text": "My profile",
+          "href": "/account/profile",
+          "dataTest": "nav-my-profile",
+          "ariaLabel": null
+        },
+        {
+          "text": "My invoices",
+          "href": "/account/invoices",
+          "dataTest": "nav-my-invoices",
+          "ariaLabel": null
+        },
+        {
+          "text": "My messages",
+          "href": "/account/messages",
+          "dataTest": "nav-my-messages",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "nav-menu",
+        "nav-my-account",
+        "nav-my-favorites",
+        "nav-my-profile",
+        "nav-my-invoices",
+        "nav-my-messages",
+        "nav-sign-out",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Jane Doe",
+          "dataTest": "nav-menu",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    },
+    "checkoutAuthenticated": {
+      "url": "https://practicesoftwaretesting.com/checkout",
+      "title": "Checkout - Practice Software Testing - Toolshop - v5.0",
+      "navLinks": [
+        {
+          "text": "",
+          "href": "/",
+          "dataTest": null,
+          "ariaLabel": null
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "dataTest": "nav-home",
+          "ariaLabel": null
+        },
+        {
+          "text": "Hand Tools",
+          "href": "/category/hand-tools",
+          "dataTest": "nav-hand-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Power Tools",
+          "href": "/category/power-tools",
+          "dataTest": "nav-power-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Other",
+          "href": "/category/other",
+          "dataTest": "nav-other",
+          "ariaLabel": null
+        },
+        {
+          "text": "Special Tools",
+          "href": "/category/special-tools",
+          "dataTest": "nav-special-tools",
+          "ariaLabel": null
+        },
+        {
+          "text": "Rentals",
+          "href": "/rentals",
+          "dataTest": "nav-rentals",
+          "ariaLabel": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "dataTest": "nav-contact",
+          "ariaLabel": null
+        }
+      ],
+      "dataTest": [
+        "notification-bar",
+        "nav-home",
+        "nav-categories",
+        "nav-hand-tools",
+        "nav-power-tools",
+        "nav-other",
+        "nav-special-tools",
+        "nav-rentals",
+        "nav-contact",
+        "language-select",
+        "lang-de",
+        "lang-el",
+        "lang-en",
+        "lang-es",
+        "lang-fr",
+        "lang-nl",
+        "lang-tr",
+        "chat-toggle"
+      ],
+      "dataTestId": [],
+      "inputs": [],
+      "buttons": [
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Testing Guide",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "≡ƒÉ¢ Bug Hunting",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Toggle navigation",
+          "dataTest": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "Categories",
+          "dataTest": "nav-categories",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "role": null,
+          "name": "EN",
+          "dataTest": "language-select",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "type": null,
+          "role": null,
+          "name": "Open chat",
+          "dataTest": "chat-toggle",
+          "disabled": false
+        }
+      ]
+    }
+  }
+}
