@@ -34,6 +34,8 @@ class RegisterPage extends BasePage {
     this.passwordInput = page.getByTestId('password');
     this.registerSubmit = page.getByTestId('register-submit');
     this.postcodeLookupHint = page.getByTestId('postcode-lookup-hint');
+    /** SUT shows plain text (no email-error data-test) when email is already registered. */
+    this.duplicateEmailMessage = page.getByText(/customer with this email address already exists/i);
   }
 
   async open() {

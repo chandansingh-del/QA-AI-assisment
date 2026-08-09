@@ -2,7 +2,7 @@
  * TC-UI-SMOKE-003 | SC-03 | Maps to TC-MAN-002 (steps 5–8)
  */
 const { test, expect, testData } = require('../../../fixtures');
-const { loginAsSeededCustomer, resolveSmokeProducts, addProductById } = require('../helpers/smokeSetup');
+const { loginAsSeededCustomer, resolveSmokeProducts, addProductById, clearAllCartLines } = require('../helpers/smokeSetup');
 
 test.describe('Smoke — Cart and quantity', () => {
   test('logged-in user can manage multi-item cart and update quantity @smoke', async ({
@@ -16,6 +16,7 @@ test.describe('Smoke — Cart and quantity', () => {
     const updatedQty = testData.QUANTITY_EDGE.multiItemSecondary;
 
     await loginAsSeededCustomer(loginPage);
+    await clearAllCartLines(cartPage, page);
     await addProductById(productDetailPage, page, primary.id, 1);
     await addProductById(productDetailPage, page, secondary.id, 1);
 

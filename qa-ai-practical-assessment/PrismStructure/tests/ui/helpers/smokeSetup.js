@@ -73,9 +73,26 @@ async function ensureCustomerBillingProfile(profilePage, billing) {
     .toBe(true);
 }
 
+/**
+ * Remove all line items from checkout cart (best-effort qty=0).
+ * @param {import('../../pages/CartPage').CartPage} cartPage
+ * @param {import('@playwright/test').Page} page
+ */
+async function clearAllCartLines(cartPage, page) {
+  await cartPage.open();
+  const lineTitles = page.getByTestId('product-title');
+  while ((await lineTitles.count()) > 0) {
+    const productName = (await lineTitles.first().textContent())?.trim();
+    if (!productName) break;
+    await cartPage.updateLineQuantity(productName, 0);
+    await expect(lineTitles.filter({ hasText: productName })).toHaveCount(0, { timeout: 15_000 });
+  }
+}
+
 module.exports = {
   loginAsSeededCustomer,
   resolveSmokeProducts,
   addProductById,
   ensureCustomerBillingProfile,
+  clearAllCartLines,
 };

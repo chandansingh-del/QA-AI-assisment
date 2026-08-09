@@ -3,7 +3,7 @@
  * Validates double-confirm invoice generation (assessment requirement).
  */
 const { test, expect, testData } = require('../../../fixtures');
-const { loginAsSeededCustomer, resolveSmokeProducts, addProductById, ensureCustomerBillingProfile } = require('../helpers/smokeSetup');
+const { loginAsSeededCustomer, resolveSmokeProducts, addProductById, ensureCustomerBillingProfile, clearAllCartLines } = require('../helpers/smokeSetup');
 
 test.describe('Smoke — Checkout and invoice', () => {
   test('COD checkout with double-confirm creates invoice visible in My Invoices @smoke', async ({
@@ -26,6 +26,7 @@ test.describe('Smoke — Checkout and invoice', () => {
     const updatedQty = testData.QUANTITY_EDGE.multiItemSecondary;
 
     await loginAsSeededCustomer(loginPage);
+    await clearAllCartLines(cartPage, page);
     await ensureCustomerBillingProfile(profilePage, billing);
 
     await addProductById(productDetailPage, page, primary.id, 1);
@@ -36,7 +37,12 @@ test.describe('Smoke — Checkout and invoice', () => {
 
     const resolvedBilling = await checkoutPage.completeBillingAndPayment(cartPage, billing);
     await expect(checkoutPage.confirmButton).toBeEnabled();
-    await checkoutPage.confirmOrderTwice();
+    await checkoutPage.confirmOrderTwice({
+      state: resolvedBilling.state || billing.state,
+      postalCode: resolvedBilling.postalCode || billing.postalCode,
+      street: resolvedBilling.street,
+      city: resolvedBilling.city,
+    });
 
     await appHeader.goToInvoices();
     await page.reload();

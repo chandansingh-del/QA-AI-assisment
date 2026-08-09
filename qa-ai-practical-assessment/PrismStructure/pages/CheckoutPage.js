@@ -82,6 +82,11 @@ class CheckoutPage extends BasePage {
       await this.syncInputValue(this.houseNumberInput, billing.houseNumber);
       await expect.poll(async () => this.streetInput.inputValue()).not.toBe('');
       await this.syncInputValue(this.stateInput, billing.state);
+      await this.syncInputValue(this.postalCodeInput, billing.postalCode);
+      const cityValue = await this.cityInput.inputValue();
+      if (!cityValue) {
+        await this.syncInputValue(this.cityInput, billing.city);
+      }
     } else {
       await this.syncInputValue(this.streetInput, billing.street);
       await this.syncInputValue(this.cityInput, billing.city);
@@ -94,7 +99,22 @@ class CheckoutPage extends BasePage {
     await expect(this.proceedStep3).toBeEnabled({ timeout: 15_000 });
     await this.proceedStep3.click();
 
-    return this.readBillingFields();
+    return resolved;
+  }
+
+  /**
+   * Re-sync billing controls so Angular includes string values in invoice payload.
+   * @param {{ state: string, postalCode: string, street?: string, city?: string }} billing
+   */
+  async ensureBillingBoundForInvoice(billing) {
+    await this.syncInputValue(this.stateInput, billing.state);
+    await this.syncInputValue(this.postalCodeInput, billing.postalCode);
+    if (billing.street) {
+      await this.syncInputValue(this.streetInput, billing.street);
+    }
+    if (billing.city) {
+      await this.syncInputValue(this.cityInput, billing.city);
+    }
   }
 
   /**
@@ -113,7 +133,10 @@ class CheckoutPage extends BasePage {
   }
 
   /** Assessment requirement: invoice requires Confirm clicked twice. */
-  async confirmOrderTwice() {
+  async confirmOrderTwice(billing) {
+    if (billing) {
+      await this.ensureBillingBoundForInvoice(billing);
+    }
     await expect(this.confirmButton).toBeEnabled();
     await Promise.all([
       this.page.waitForResponse(
@@ -125,6 +148,9 @@ class CheckoutPage extends BasePage {
     await this.page.getByText(/payment was successful/i).waitFor({ state: 'visible', timeout: 15_000 });
 
     await expect(this.confirmButton).toBeEnabled({ timeout: 15_000 });
+    if (billing) {
+      await this.ensureBillingBoundForInvoice(billing);
+    }
     const invoiceResponse = await Promise.all([
       this.page.waitForResponse(
         (response) => /\/invoices$/.test(response.url()) && response.request().method() === 'POST',
