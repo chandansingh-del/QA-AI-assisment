@@ -15,7 +15,7 @@ const { request, devices } = require('@playwright/test');
 const testData = require('../test-data/testData');
 const { getProductByName } = require('../utils/productResolver');
 
-const OUT_DIR = path.resolve(__dirname, '../../execution-evidence/manual');
+const OUT_DIR = path.resolve(__dirname, '../execution-evidence/manual');
 const DATE = new Date().toISOString().slice(0, 10);
 
 /** @param {import('playwright').Page} page */

@@ -286,9 +286,9 @@ ai-prompts/
 ### Required Structure (from assessment)
 
 ```
-qa-ai-practical-assessment/
+QA-AI-assisment/             # Repository root (assessment deliverables at top level)
 ├── FunctionalTestCase.csv
-├── PrismStructure/          # Playwright/Selenium for API+UI + Execution Report
+├── PrismStructure/          # Playwright for API+UI + Execution Report
 ├── project-info.md
 ├── readme.md
 └── ai-prompts/

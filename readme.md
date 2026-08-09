@@ -84,7 +84,7 @@ Playwright projects in `playwright.config.js`:
 ## Repository Structure
 
 ```
-qa-ai-practical-assessment/
+QA-AI-assisment/                 # Repository root
 ├── FunctionalTestCase.csv       # 8 manual test cases (2 smoke, 6 regression)
 ├── project-info.md              # AI-assisted workflow narrative
 ├── readme.md                    # This file
@@ -95,7 +95,7 @@ qa-ai-practical-assessment/
 │   ├── ui-selector-strategy.md
 │   └── api-analysis.md
 ├── ai-prompts/                  # Phase prompt histories
-├── execution-evidence/          # Manual + automation evidence (attach on run)
+├── execution-evidence/          # Manual + automation evidence
 ├── PrismStructure/              # Playwright automation root
 │   ├── playwright.config.js
 │   ├── package.json
@@ -132,7 +132,7 @@ Clone the repository and install dependencies from the automation root:
 
 ```bash
 git clone https://github.com/chandansingh-del/QA-AI-assisment.git
-cd QA-AI-assisment/qa-ai-practical-assessment/PrismStructure
+cd QA-AI-assisment/PrismStructure
 npm install
 npx playwright install chromium
 ```
@@ -494,7 +494,7 @@ Recent commits on `main` (automation delivered incrementally):
 ```bash
 git clone https://github.com/chandansingh-del/QA-AI-assisment.git
 cd QA-AI-assisment
-git log --oneline -- qa-ai-practical-assessment/
+git log --oneline
 ```
 
 ---
